@@ -11,7 +11,7 @@ def print_test_message(**kwargs):
     start_date=datetime(2025, 7, 1),
     schedule=None,
     catchup=False,
-    tags=['test_operation', 'slack_test'],
+    tags=['test_operation'],
 )
 def test_dag():
     test_dag_operation = PythonOperator(
