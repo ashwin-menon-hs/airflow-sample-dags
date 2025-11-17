@@ -1,6 +1,6 @@
 from airflow.decorators import dag, task
 from airflow.operators.python import PythonOperator
-from datetime import datetime
+from datetime import datetime, timedelta
 
 def print_test_message(**kwargs):
     conf = kwargs['dag_run'].conf
@@ -9,7 +9,7 @@ def print_test_message(**kwargs):
 
 @dag(
     start_date=datetime(2025, 7, 1),
-    schedule=None,
+    schedule_interval=timedelta(minutes=15),
     catchup=False,
     tags=['test_operation'],
 )
