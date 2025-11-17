@@ -11,7 +11,7 @@ def print_test_message(**kwargs):
     start_date=datetime(2025, 7, 1),
     schedule_interval=timedelta(minutes=15),
     catchup=False,
-    tags=['test_operation'],
+    tags=['test_operation', 'git_sync_test'],
 )
 def test_dag():
     test_dag_operation = PythonOperator(
